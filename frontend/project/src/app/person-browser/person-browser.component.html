@@ -1,0 +1,22 @@
+<div class="table-responsive" *ngIf="people">
+  <table class="table table-hover table-dark">
+    <thead>
+    <tr>
+      <th scope="col">Login</th>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of people">
+      <td>{{p.login}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.surname}}</td>
+      <td>{{p.email}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-person-add [people]="people"></app-person-add>
+
